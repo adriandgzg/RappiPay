@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_RappiTestMovieCatalog_RappiTestMovieCatalogUITests : NSObject
+@end
+@implementation PodsDummy_Pods_RappiTestMovieCatalog_RappiTestMovieCatalogUITests
+@end

@@ -1,30 +1,34 @@
-
+//
+//  SceneDelegate.swift
+//  RappiTestMovieCatalog
+//
+//  Created by Adrian Dominguez Gómez on 29/11/21.
+//
 
 import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-
-open class AsyncManager : NSObject{
+protocol AsyncManagerProtocols:AnyObject {
+    func requestExecute<T:Mappable>(_ serviceConfig:RequestProtocol, completion:@escaping (_ dataResponse:T) -> Void, errorCompletition: @escaping (_ errorString:String) -> Void)
+    
+    
+}
+open class AsyncManager : AsyncManagerProtocols {
     
     public static let shared = AsyncManager()
     
    let sessionManager = Alamofire.SessionManager()
     public var backentProtocol  = "https://"
-    public var backentHost =  "www.themealdb.com/api/json/v1/1/"
+    public var backentHost =  "api.themoviedb.org/3"
    
-    
-    
     
     var blockRetry : blckChangeHeader? = nil
     var saverHeader:Bool = false
     var requestRetry: RequestProtocol? = nil
 
-   public override init() {
-        super.init()
-        backentProtocol  = "https://"
-        backentHost      =  "www.themealdb.com/api/json/v1/1/"
+   public init() {
     }
     
    public func setRequestForRetry(request:RequestProtocol?){
@@ -50,7 +54,7 @@ open class AsyncManager : NSObject{
 
 extension AsyncManager {
     
-    open func requestExecute<T:Mappable>(_ serviceConfig:RequestProtocol,validateHeader : Bool = false, numberRetry: Int = 0, completion:@escaping (_ dataResponse:T) -> Void, errorCompletition: @escaping (_ errorString:String) -> Void){
+    open func requestExecute<T:Mappable>(_ serviceConfig:RequestProtocol, completion:@escaping (_ dataResponse:T) -> Void, errorCompletition: @escaping (_ errorString:String) -> Void){
         
         var url = self.composeEnvironment(strURL: serviceConfig.getUrl())
         
@@ -69,16 +73,14 @@ extension AsyncManager {
         }
         
         var headers : [String:String] = ["Content-Type":"application/x-www-form-urlencoded"]
-
-             
-        
         if let head = serviceConfig.getHeaders() {
              headers = head
         }
+        headers["Authorization"] = "Bearer \(constants.bearerKey)"
+        headers["Accept"] = "application/json"
         
         sessionManager.request(url,method: type, parameters: parameters, encoding:URLEncoding.default, headers: headers ).responseObject { (response: DataResponse<T>) in
             if response.result.isSuccess{
-                
                 let responseService = response.result.value
                 completion(responseService!)
             } else {
@@ -91,7 +93,6 @@ extension AsyncManager {
    
     
     func composeEnvironment(strURL:String)-> String{
-       
         let url =  "\(self.backentProtocol)\(self.backentHost)\(strURL)"
         
         return url

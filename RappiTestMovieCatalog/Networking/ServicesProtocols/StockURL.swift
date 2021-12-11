@@ -1,12 +1,65 @@
+//
+//  SceneDelegate.swift
+//  RappiTestMovieCatalog
+//
+//  Created by Adrian Dominguez Gómez on 29/11/21.
+//
 import Foundation
-
+import UIKit
 public typealias blckChangeHeader = () -> (user:String, psw:String)
 
 public struct stockURL {
-    //MARK: - L O G I N
-    static let search                    = "search.php?"
-    static let lookup                    = "lookup.php?"
-    static let random                    = "random.php"
+    static let popularsMovies    = "/movie/popular"
+    static let upcomingMovies    = "/movie/upcomming"
+    static let topRated          = "/movie/top_rated"
+    static let search            = "/search/movie"
 }
 
 
+struct constants{
+    
+    static let bearerKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjODlmOTk3YjlmODA1ZDc4M2M4MWZjMWU4NTRlZDdkMSIsInN1YiI6IjYxOTZiYTkyYmMyY2IzMDA0Mjc4M2U0NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n6hXlqHR9Fv4hHi_j3pZC0oJoKq8hJrU-owQodEkocQ"
+}
+
+
+struct RetrieveMoviesServiceError {
+    static let ErrorGeneric = NSError(domain: "ErrorGeneric", code: 9000, userInfo: nil)
+}
+
+public struct messagesGeneric{
+    
+    static let error = "No se pudo completar la operación"
+}
+enum Section: String {
+    case bannerHeader = "banner-header"
+    case bannerSales = "banner-ofertas"
+    case bannerCampaign = "banner-campanas"
+    case worlds = "mundos"
+    case recents = "recomendados"
+    case featured = "destacados"
+    case news = "novedades"
+    case hall = "pasillos"
+    
+    var heightCell: CGFloat {
+        get {
+            switch self {
+            case .bannerHeader:
+                return 130.0
+            case .bannerSales:
+                return UIScreen.main.bounds.width * 157.0/327.0
+            case .bannerCampaign:
+                return 100.0
+            case .worlds:
+                return 288.0
+            case .recents:
+                return 190.0
+            case .featured:
+                return 142.0
+            case .hall:
+                return 242.0
+            case .news:
+                return 120.0
+            }
+        }
+    }
+}

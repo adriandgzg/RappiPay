@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9B61E4E9-416E-4C5E-802E-CD7C43087B6A"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "097B39FB-18E3-4AF6-B350-0B9E1C56879C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalog/Models/Request/TopRatedRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "TopRatedRequest"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB5AFCB-D54D-4DC4-BC80-3B4CD1173AD7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalogTests/OflineMoviesTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "test_AddTwoTimeMovieInCache()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFB5AFCB-D54D-4DC4-BC80-3B4CD1173AD7 - c698f6b6fb387d93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieCatalogTests.MoviesOflineTest.test_AddTwoTimeMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieCatalogTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineMoviesTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1095">
+               </Location>
+               <Location
+                  uuid = "BFB5AFCB-D54D-4DC4-BC80-3B4CD1173AD7 - c698f6b6fb387df2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieCatalogTests.MoviesOflineTest.test_AddTwoTimeMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieCatalogTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineMoviesTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "266117B1-DBAF-472C-988D-9A09D584A0A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalogTests/OflineRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "test_AddTwoTimeSameMovieInCache()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "266117B1-DBAF-472C-988D-9A09D584A0A0 - 7dc883e2bb8b7d3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieTests.MoviesOflineTest.test_AddTwoTimeMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1106">
+               </Location>
+               <Location
+                  uuid = "266117B1-DBAF-472C-988D-9A09D584A0A0 - 7dc883e2bb8b7d3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieTests.MoviesOflineTest.test_AddTwoTimeMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1094">
+               </Location>
+               <Location
+                  uuid = "266117B1-DBAF-472C-988D-9A09D584A0A0 - 7dc883e2bb8b7ddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieTests.MoviesOflineTest.test_AddTwoTimeMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1155">
+               </Location>
+               <Location
+                  uuid = "266117B1-DBAF-472C-988D-9A09D584A0A0 - 210c85ddafe8f7d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RappiTestMovieTests.MoviesOflineTest.test_AddTwoTimeSameMovieInCache() -&gt; ()"
+                  moduleName = "RappiTestMovieTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalogTests/OflineRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EAD5435-B5A8-47D6-80C1-C40B3A1B3435"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalog/Repositories/MoviesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getPopulateMovies(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0EAD5435-B5A8-47D6-80C1-C40B3A1B3435 - e4f52e45f6086a7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RappiTestMovie.PopulatesResponse) -&gt; () in RappiTestMovie.MoviesRepository.getPopulateMovies(completion: (Swift.Result&lt;Swift.Array&lt;RappiTestMovie.MovieItem&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RappiTestMovie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalog/Repositories/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "0EAD5435-B5A8-47D6-80C1-C40B3A1B3435 - d07ec6bf1519d810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RappiTestMovieTests.PopulatesResponse) -&gt; () in RappiTestMovieTests.MoviesRepository.getPopulateMovies(completion: (Swift.Result&lt;Swift.Array&lt;RappiTestMovieTests.MovieItem&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "RappiTestMovieTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adriandominguezgomez/Documents/Free/RappiTestMovieCatalog/RappiTestMovieCatalog/Repositories/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AFC915B-8F64-4312-88FC-45A4F166C811"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalog/Modules/Home/Interactor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B771A388-48A9-4474-8E55-8D8D36369DC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RappiTestMovieCatalog/Modules/Home/Presenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "updateView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

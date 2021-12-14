@@ -82,13 +82,14 @@ class MoviesRepository {
     
     func searchMoview(query:String, completion:@escaping getMoviesItemsResponse){
         let search = SearchRequest(searchString: query)
-        
+        print(query)
         AsyncManager.shared.requestExecute(search) { (dataResponse : SearchResponse) in
             guard let movies = dataResponse.results else {
                 let itemsOfline = self.dbOfline.fetchMovies(category: .all)
                 completion(.success(itemsOfline))
                 return
             }
+            print(movies)
             completion(.success(movies))
         } errorCompletition: { errorString in
             

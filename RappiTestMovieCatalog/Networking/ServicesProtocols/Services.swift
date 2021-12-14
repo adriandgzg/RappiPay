@@ -78,7 +78,7 @@ extension AsyncManager {
         }
         headers["Authorization"] = "Bearer \(constants.bearerKey)"
         headers["Accept"] = "application/json"
-        
+        print(url)
         sessionManager.request(url,method: type, parameters: parameters, encoding:URLEncoding.default, headers: headers ).responseObject { (response: DataResponse<T>) in
             if response.result.isSuccess{
                 let responseService = response.result.value

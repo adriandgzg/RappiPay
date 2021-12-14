@@ -220,8 +220,8 @@
             filePath = "RappiTestMovieCatalog/Modules/Home/Presenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "moviesFetched(moviesData:)"
             landmarkType = "7">
          </BreakpointContent>

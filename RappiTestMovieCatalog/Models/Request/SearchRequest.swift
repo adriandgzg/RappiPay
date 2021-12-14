@@ -23,7 +23,7 @@ class SearchRequest: RequestProtocol {
     }
     
     func getUrl() -> String {
-        return stockURL.topRated
+        return stockURL.search
     }
     
     func getReplaceKeys() -> Parameters? {

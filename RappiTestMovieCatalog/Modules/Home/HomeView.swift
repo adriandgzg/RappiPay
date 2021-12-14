@@ -92,7 +92,7 @@ extension HomeView: UISearchBarDelegate {
                 isSearch = false
                
             } else {
-                if searchText.count == 3{
+                if searchText.count >= 3{
                     
                     isSearch = true
                     self.presenter?.searchMovies(query: searchText)

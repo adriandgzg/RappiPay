@@ -28,7 +28,6 @@ class HomePresenter : HomeMoviesModuleInterface {
 
 extension HomePresenter: HomeMoviesInteractorOutput {
     func moviesFetched(moviesData: HomeModel) {
-      
         self.view?.showMoviesData(moviesData: moviesData)
     }
     

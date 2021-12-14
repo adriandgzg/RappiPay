@@ -10,5 +10,5 @@ import Foundation
 protocol RepositoryMovieProtocol{
     func putMovie(movies:[MovieItem], categoryMovies:typeCategory)
     func setupDatabase()
-    func fetchMovies() -> [MovieItem]
+    func fetchMovies(category: typeCategory) -> [MovieItem] 
 }

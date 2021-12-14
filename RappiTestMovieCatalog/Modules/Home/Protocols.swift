@@ -13,8 +13,9 @@ protocol HomeViewInterface: AnyObject {
 
 
 protocol HomeMoviesModuleInterface: AnyObject {
-   func updateView()
-   func showDetailsForMovie(movieData:MovieItem)
+    func updateView()
+    func showDetailsForMovie(movieData:MovieItem)
+    func searchMovies(query:String)
 }
 
 protocol  HomeMoviesInteractorOutput: AnyObject {

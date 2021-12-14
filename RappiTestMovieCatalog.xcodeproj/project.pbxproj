@@ -48,6 +48,8 @@
 		9C4D063B2768576600FC490A /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D06392768576600FC490A /* MovieDetailView.swift */; };
 		9C4D063C2768576600FC490A /* MovieDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D063A2768576600FC490A /* MovieDetailView.xib */; };
 		9C4D063E27685EB000FC490A /* RouterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D063D27685EB000FC490A /* RouterDetail.swift */; };
+		9C4D064327686E8000FC490A /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D064127686E8000FC490A /* SearchResultTableViewCell.swift */; };
+		9C4D064427686E8000FC490A /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4D064227686E8000FC490A /* SearchResultTableViewCell.xib */; };
 		9C52C50227603B6A0045E7D3 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52C50127603B6A0045E7D3 /* SearchRequest.swift */; };
 		9C52C50327603B6A0045E7D3 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52C50127603B6A0045E7D3 /* SearchRequest.swift */; };
 		9C52C50527606CFA0045E7D3 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C52C50427606CF90045E7D3 /* MoviesRepository.swift */; };
@@ -161,6 +163,8 @@
 		9C4D06392768576600FC490A /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		9C4D063A2768576600FC490A /* MovieDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailView.xib; sourceTree = "<group>"; };
 		9C4D063D27685EB000FC490A /* RouterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDetail.swift; sourceTree = "<group>"; };
+		9C4D064127686E8000FC490A /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		9C4D064227686E8000FC490A /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		9C52C50127603B6A0045E7D3 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		9C52C50427606CF90045E7D3 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		9C52C5112760999D0045E7D3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -402,6 +406,8 @@
 			children = (
 				9C4D062F27680A3F00FC490A /* FeaturedLandingCollectionViewCell.xib */,
 				9C4D063027680A3F00FC490A /* FeaturedLandingCollectionViewCell.swift */,
+				9C4D064127686E8000FC490A /* SearchResultTableViewCell.swift */,
+				9C4D064227686E8000FC490A /* SearchResultTableViewCell.xib */,
 			);
 			name = cell;
 			path = RappiTestMovieCatalog/Modules/Home/SectionsLanding/FeaturedSectionLandingTableViewCell/cell;
@@ -638,6 +644,7 @@
 				9C1F510F27628B7900757FA0 /* SuccesResponse.json in Resources */,
 				9C4D063327680A3F00FC490A /* FeaturedLandingCollectionViewCell.xib in Resources */,
 				9C4D063C2768576600FC490A /* MovieDetailView.xib in Resources */,
+				9C4D064427686E8000FC490A /* SearchResultTableViewCell.xib in Resources */,
 				9C407ADD275578F300384A78 /* Assets.xcassets in Resources */,
 				9C407ADB275578F200384A78 /* Main.storyboard in Resources */,
 				9C4D061F276425EC00FC490A /* BannerHeaderTableViewCell.xib in Resources */,
@@ -794,6 +801,7 @@
 				9C4D06272764291B00FC490A /* Utilities.swift in Sources */,
 				9CD9E8752756FC71000ED66B /* PopulateMoviesRequest.swift in Sources */,
 				9C4D062D27642B2100FC490A /* BannerCollectionViewCell.swift in Sources */,
+				9C4D064327686E8000FC490A /* SearchResultTableViewCell.swift in Sources */,
 				9CD9E8702756FAD6000ED66B /* MovieItem.swift in Sources */,
 				9CE41697276418A400FC77C9 /* MainCoordinator.swift in Sources */,
 				9C37228827598ED000BC41BA /* TopRatedRequest.swift in Sources */,

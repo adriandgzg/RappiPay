@@ -35,6 +35,7 @@ extension HomePresenter: HomeMoviesInteractorOutput {
     func searchFetchet(moviesData: HomeModel) {
         self.view?.showMoviesData(moviesData: moviesData)
     }
-    
-    
+    func searchMovies(query: String) {
+        self.interactor?.searchMovies(query: query)
+    }
 }

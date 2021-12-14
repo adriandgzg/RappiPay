@@ -13,6 +13,7 @@ typealias getMoviesItemsResponse = (Result<[MovieItem], Error>) -> Void
 class MoviesRepository {
     let serviceManager : AsyncManagerProtocols
     let error = RetrieveMoviesServiceError.ErrorGeneric
+    let dbOfline = DBMovie()
     init (serviceManagers : AsyncManagerProtocols){
         self.serviceManager = serviceManagers
     }
@@ -23,12 +24,17 @@ class MoviesRepository {
         self.serviceManager.requestExecute(populateMovies) { [weak self] (dataResponse : PopulatesResponse) in
             guard let self = self else {return}
             guard let movies = dataResponse.results else {
-                completion(.failure(self.error))
+                let itemsOfline = self.dbOfline.fetchMovies(category: .PopularItems)
+                completion(.success(itemsOfline))
                 return
             }
+           
+            self.dbOfline.putMovie(movies: movies, categoryMovies: .PopularItems)
             completion(.success(movies))
+            
         } errorCompletition: { errorString in
-            completion(.failure(self.error))
+            let itemsOfline = self.dbOfline.fetchMovies(category: .PopularItems)
+            completion(.success(itemsOfline))
         }
     }
     
@@ -38,12 +44,18 @@ class MoviesRepository {
         let upcommingMoviess = UpcomingMoviesRequest()
         self.serviceManager.requestExecute(upcommingMoviess) { (dataResponse : UpcomingResponse) in
             guard let movies = dataResponse.results else {
-                completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+                let itemsOfline = self.dbOfline.fetchMovies(category: .upcomming)
+                completion(.success(itemsOfline))
                 return
             }
+          
+            self.dbOfline.putMovie(movies: movies, categoryMovies: .upcomming)
             completion(.success(movies))
+            
+         
         } errorCompletition: { errorString in
-            completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+            let itemsOfline = self.dbOfline.fetchMovies(category: .upcomming)
+            completion(.success(itemsOfline))
         }
         
         
@@ -51,14 +63,20 @@ class MoviesRepository {
     
     func getTopRatedMovies(completion:@escaping getMoviesItemsResponse){
         let topRatedRequest = TopRatedRequest()
-        self.serviceManager.requestExecute(topRatedRequest) { (dataResponse : UpcomingResponse) in
+        self.serviceManager.requestExecute(topRatedRequest) { (dataResponse : TopRatedResponse) in
             guard let movies = dataResponse.results else {
-                completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+                let itemsOfline = self.dbOfline.fetchMovies(category: .topRated)
+                completion(.success(itemsOfline))
                 return
             }
+            
+            self.dbOfline.putMovie(movies: movies, categoryMovies: .topRated)
             completion(.success(movies))
+            
         } errorCompletition: { errorString in
-            completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+            //completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+            let itemsOfline = self.dbOfline.fetchMovies(category: .topRated)
+            completion(.success(itemsOfline))
         }
     }
     
@@ -67,12 +85,15 @@ class MoviesRepository {
         
         AsyncManager.shared.requestExecute(search) { (dataResponse : SearchResponse) in
             guard let movies = dataResponse.results else {
-                completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+                let itemsOfline = self.dbOfline.fetchMovies(category: .all)
+                completion(.success(itemsOfline))
                 return
             }
             completion(.success(movies))
         } errorCompletition: { errorString in
-            completion(.failure(RetrieveMoviesServiceError.ErrorGeneric))
+            
+            let itemsOfline = self.dbOfline.fetchMovies(category: .all)
+            completion(.success(itemsOfline))
         }
     }
 }

@@ -22,10 +22,17 @@ class DBMovie : RepositoryMovieProtocol {
     }
     
     
-    func fetchMovies() -> [MovieItem] {
+    func fetchMovies(category: typeCategory = .all) -> [MovieItem] {
         let movies = read()
+            
+        var moviesFilter = movies
+        if category != .all {
+            moviesFilter = movies.filter { movie in
+                return movie.category == category.rawValue
+            }
+        }
         
-        let result = movies.map { (movie : MovieDB) -> MovieItem in
+        let result = moviesFilter.map { (movie : MovieDB) -> MovieItem in
             return MovieItem(id: movie.id, adult: movie.adult, backdrop_path: movie.backdrop_path, genre_ids: [], original_language: movie.original_language, original_title: movie.original_title, overview: movie.overview, popularity: movie.popularity, poster_path: movie.poster_path, release_date: movie.release_date, title: movie.title, video: movie.video, vote_average: movie.vote_average, vote_count: movie.vote_count)
         }
         

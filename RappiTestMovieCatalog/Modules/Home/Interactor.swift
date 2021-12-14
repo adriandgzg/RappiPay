@@ -19,7 +19,6 @@ class HomeInteractor : HomeMoviesInteractorInput {
     
     func fetchMovies() {
         
-        self.modules.isFromSearch = false
         //dependency injection
         let serviceManager = AsyncManager.shared
         let repository = MoviesRepository(serviceManagers: serviceManager)
@@ -80,8 +79,8 @@ class HomeInteractor : HomeMoviesInteractorInput {
             guard let self = self else {return}
             switch result {
             case .success(let items):
-                self.modules.isFromSearch = true
-                self.modules.upcomingMovies = items
+               
+                self.modules.searchMovies = items
                 self.presenter?.moviesFetched(moviesData: self.modules)
                 break
             case .failure(_):

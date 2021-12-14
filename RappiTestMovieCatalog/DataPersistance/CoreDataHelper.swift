@@ -12,5 +12,6 @@ enum typeCategory: String {
     case topRated = "TopRated"
     case upcomming = "Upcomming"
     case PopularItems = "Popular"
+    case all           = "No filter"
 }
 

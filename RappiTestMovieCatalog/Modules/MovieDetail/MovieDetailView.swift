@@ -14,7 +14,6 @@ protocol DetailViewInterface:AnyObject {
 class MovieDetailView: UIViewController , DetailViewInterface {
    
     
-    
     var item:MovieItem?
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var titleMovie: UIView!
@@ -24,7 +23,8 @@ class MovieDetailView: UIViewController , DetailViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //yourViewName.addSubview(searchBar)//Here cha
         // Do any additional setup after loading the view.
         self.updateView()
     }

@@ -8,7 +8,6 @@
 import Foundation
 
 class HomeModel {
-    var isFromSearch = false
     var populatesMovies: [MovieItem]  = []
     var upcomingMovies:[MovieItem]  = []
     var topRatedMovies:[MovieItem]  = []

@@ -1,33 +1,24 @@
 //
-//  BannerCollectionViewCell.swift
-//  WongCencosud
+//  Abstracts.swift
+//  RappiTestMovie
 //
-//  Created By Gabriel Castillo on 16/06/21.
+//  Created by Adrian Dominguez Gómez on 10/12/21.
 //
 
 import UIKit
-import CencosudMobileCore
-
+import AlamofireImage
 class BannerCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imgBanner: UIImageView!
-    
-    
-    //FIXME: Keep a model
-    var banner: Banner? {
+    var banner: MovieItem? {
         didSet {
-            guard let pathImage = banner?.image else { return }
-            self.imgBanner.loadFromWebImage(path: pathImage, completion: nil)
+            guard let pathImage = banner?.poster_path, let url = URL(string: "https://image.tmdb.org/t/p/w500" + pathImage) else { return }
+            self.imgBanner.af_setImage(withURL:url)
+            self.lblTitle.text = banner?.title ?? ""
+            
         }
     }
-    
-    var banner2: BannerSection? {
-        didSet {
-            guard let pathImage = banner2?.image else { return }
-            self.imgBanner.loadFromWebImage(path: pathImage, completion: nil)
-        }
-    }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,7 +7,7 @@
 
 import Foundation
 protocol HomeViewInterface: AnyObject {
-    func showMoviesData(moviesData:HomeModel)
+    func showMoviesData(moviesData: HomeModel)
     func showNoContentScreen()
 }
 
@@ -18,7 +18,7 @@ protocol HomeMoviesModuleInterface: AnyObject {
 }
 
 protocol  HomeMoviesInteractorOutput: AnyObject {
-   func moviesFetched(moviesData:HomeModel)
+    func moviesFetched(moviesData:HomeModel)
     func searchFetchet(moviesData:HomeModel)
 }
 
@@ -30,4 +30,8 @@ protocol HomeMoviesInteractorInput: AnyObject {
 
 protocol HomeMoviesRouterInterface:AnyObject{
     func goToMovieDetail(movie:MovieItem)
+}
+
+protocol didSelectMoviesProtocol :AnyObject {
+    func didSelectMovies(item:MovieItem)
 }

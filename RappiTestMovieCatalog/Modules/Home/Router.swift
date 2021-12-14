@@ -34,7 +34,13 @@ class HomeRouter : HomeMoviesRouterInterface {
         self.view = view
     }
     func goToMovieDetail(movie: MovieItem) {
-     //TODO: go to movie detail 
+        
+        let detailRouter = DetailMovieRouter()
+        let viewDetailModule = detailRouter.createModule()
+        detailRouter.view = viewDetailModule
+        if let vc  = self.view {
+            detailRouter.goToDetailMovieFlow(item: movie, viewOrigin: vc )
+        }
     }
         
     

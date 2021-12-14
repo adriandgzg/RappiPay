@@ -39,9 +39,12 @@ class HomeInteractor : HomeMoviesInteractorInput {
         
         let dataSourceUpcommingMovies = UpcomingMovies(repository: repository)
         
-        dataSourceUpcommingMovies.execute {[weak self] result in
-            guard let self = self else {return}
-            switch result {
+        dataSourceUpcommingMovies.execute {[weak self] res in
+            guard let self = self else {
+                return
+                
+            }
+            switch res {
             case .success(let items):
                 self.modules.upcomingMovies = items
                 self.presenter?.moviesFetched(moviesData: self.modules)
@@ -58,7 +61,7 @@ class HomeInteractor : HomeMoviesInteractorInput {
             guard let self = self else {return}
             switch result {
             case .success(let items):
-                self.modules.upcomingMovies = items
+                self.modules.topRatedMovies = items
                 self.presenter?.moviesFetched(moviesData: self.modules)
                 break
             case .failure(_):

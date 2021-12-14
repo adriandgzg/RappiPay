@@ -10,7 +10,7 @@ public typealias blckChangeHeader = () -> (user:String, psw:String)
 
 public struct stockURL {
     static let popularsMovies    = "/movie/popular"
-    static let upcomingMovies    = "/movie/upcomming"
+    static let upcomingMovies    = "/movie/upcoming"
     static let topRated          = "/movie/top_rated"
     static let search            = "/search/movie"
 }
@@ -31,35 +31,13 @@ public struct messagesGeneric{
     static let error = "No se pudo completar la operación"
 }
 enum Section: String {
-    case bannerHeader = "banner-header"
-    case bannerSales = "banner-ofertas"
-    case bannerCampaign = "banner-campanas"
-    case worlds = "mundos"
-    case recents = "recomendados"
-    case featured = "destacados"
-    case news = "novedades"
-    case hall = "pasillos"
-    
-    var heightCell: CGFloat {
-        get {
-            switch self {
-            case .bannerHeader:
-                return 130.0
-            case .bannerSales:
-                return UIScreen.main.bounds.width * 157.0/327.0
-            case .bannerCampaign:
-                return 100.0
-            case .worlds:
-                return 288.0
-            case .recents:
-                return 190.0
-            case .featured:
-                return 142.0
-            case .hall:
-                return 242.0
-            case .news:
-                return 120.0
-            }
-        }
-    }
+    case populars = "Populares"
+    case Upcoming = "Proximamente"
+    case TopRated = "Top Ranking"
+
 }
+    
+
+
+
+public var contentOfset: CGPoint = .zero

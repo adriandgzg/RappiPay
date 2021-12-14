@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import CencosudNetworking
-import CencosudMobileCore
 
 class FeaturedLandingCollectionViewCell: UICollectionViewCell {
     
@@ -16,17 +14,15 @@ class FeaturedLandingCollectionViewCell: UICollectionViewCell {
     @IBOutlet var featuredNameLabel: UILabel!
     
     // Logic
-    var featuredData: BannerSection? {
+    var featuredData: MovieItem? {
         willSet {
             guard let value = newValue else {
                 return
             }
+            guard let pathImage = value.poster_path, let url = URL(string: "https://image.tmdb.org/t/p/w500" + pathImage) else { return }
+            self.featuredImage.af_setImage(withURL:url)
             
-            self.featuredImage.loadFromWebImage(path: value.image, completion: nil)
-            self.featuredImage.addCornerRadius()
-            
-            
-            self.featuredNameLabel.text = value.name
+            self.featuredNameLabel.text = value.title
         }
     }
 
